@@ -1,0 +1,37 @@
+- unless product.variations.empty?
+  
+  %div.variations
+  
+    = form.fields_for product.variations do |f|
+      
+      %div.container_12.variation
+
+        %div.pair
+          %div.label
+            = f.label :photo, t('product.variation.attributes.photo')
+          %div.field
+            = f.file_field :photo
+
+        %div.pair
+          %div.label
+            = f.label :sku, t('product.variation.attributes.sku')
+          %div.field
+            = f.text_field :sku
+  
+        %div.pair
+          %div.label
+            = f.label :units, t('product.variation.attributes.units')
+          %div.field
+            = f.text_field :units
+  
+        %div.pair
+          %div.label
+            = f.label :description, t('product.variation.attributes.description')
+          %div.field
+            = f.text_area :description, { rows: 4 }
+  
+        %div.pair
+          %div.label
+            = f.label :unit_price, t('product.variation.attributes.unit_price')
+          %div.field
+            = f.text_field :unit_price, value: f.object.unit_price.to_s

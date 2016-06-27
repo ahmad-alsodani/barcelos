@@ -1,0 +1,72 @@
+@import 'compass/utilities/general/clearfix';
+
+.form {
+  @include grid(9, 16);
+  @include alpha;
+    
+  form {
+    @include clearfix;    
+  }
+  
+  .pair:first-child {
+    margin-top: 0;
+  }
+  
+  .pair {
+    margin-top: 10px;
+    @include clearfix;
+    @include alpha;
+    @include omega;
+    
+    .label {
+      @include grid(3, 16);
+      @include alpha;
+      text-align: right;
+    }
+
+    .field {
+      @include grid(5, 16);
+      @include omega;
+      
+      input[type="text"],
+      input[type="password"],
+      textarea{
+        font-size: 18px;
+        width: 100%;
+        height: 25px;
+        border: 1px solid #666;
+      }
+      
+      textarea {
+        height: 100px;
+      }
+      
+    }
+    
+  }
+
+  .submit {
+    @include clearfix;
+    @include grid-prefix(3, 16);
+    @include grid(4, 16);
+    margin-top: 20px;
+  }
+
+  .actions {
+    @include clearfix;
+    @include grid-prefix(3, 16);
+    @include grid(5, 16);
+    margin-top: 20px;
+    
+    a:first-child {
+      margin-bottom: 0;
+    }
+    
+    a {
+      display: block;
+      margin-top: 5px;
+    }
+
+  }
+
+}

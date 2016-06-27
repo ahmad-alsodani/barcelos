@@ -1,0 +1,14 @@
+@import 'compass/utilities/general/clearfix';
+
+footer {
+
+  @include clearfix;
+
+  margin: 100px 0 50px 0;
+  text-align: center;
+  
+  img {
+    vertical-align: middle;
+  }
+
+}

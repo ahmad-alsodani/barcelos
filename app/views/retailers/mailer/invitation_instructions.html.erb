@@ -1,0 +1,17 @@
+<% accept_url = accept_invitation_url(@resource, :invitation_token => @resource.invitation_token) %>
+
+<p>Olá!</p>
+
+<p>You have been invited to come checkout <%= root_url %>, and see all the products we have to offer you.</p>
+
+<p>You can accept this invitation by clicking <%= link_to 'Here', accept_url %>, or copy and paste this url <%= accept_url %></p>
+
+<p>This invitation was sent to <%= @resource.email %>, If you have received this email in error, or do not wish to accept the invitation, please ignore this email.<br />  
+Your account won't be created until you access the link above and set your password.</p>
+
+<p>
+  <strong>Barcelos Imports</strong></br>
+  P.O Box 384</br>
+  Applecross</br>
+  Western Australia 6953
+</p>

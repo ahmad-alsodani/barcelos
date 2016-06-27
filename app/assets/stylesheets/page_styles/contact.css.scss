@@ -1,0 +1,36 @@
+@import 'compass/utilities/general/clearfix';
+@import '960/grid';
+
+@import 'mixins';
+
+.contact-us {
+  
+  @include clearfix;
+  @include grid-children;
+  
+  .info {
+    @include clearfix;
+    @include grid(5, 16);
+    @include grid-prefix(1, 16);
+    @include alpha;
+    
+    font-size: 1.2em;
+
+    .company {
+      font-weight:bold;
+    }
+    
+    .address {
+      line-height: 130%;
+    }
+    
+    .company, .address, .phone, .fax {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .form {
+    border-right: 1px solid #000;
+  }
+    
+}

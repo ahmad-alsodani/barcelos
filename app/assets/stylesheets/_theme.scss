@@ -1,0 +1,40 @@
+@import 'fonts';
+
+body {
+  color: #333333;
+}
+
+h1, a:link, a:visited {
+  color: #C96;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+em {
+  font-weight: bold;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 115%;
+}
+
+a:link {
+  text-decoration: none;
+  font-size: 0.9em
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+tr {
+  border-bottom: 1px solid black;
+  
+  th {
+    font-weight: bold;
+  }
+}

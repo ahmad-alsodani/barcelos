@@ -1,0 +1,20 @@
+defaults: &defaults
+  host: 127.0.0.1
+  port: 27017
+
+development:
+  # <<: *defaults
+  # database: finance_api_development
+  uri: <%= ENV['MONGO_URL'] %>
+
+test:
+  <<: *defaults
+  database: test
+
+# set these environment variables on your prod server
+production:
+  # <<: *defaults
+  uri: <%= ENV['MONGOHQ_URL'] %>
+  # database: finance_api
+  # username: <%= ENV['MONGO_USERNAME'] %>
+  # password: <%= ENV['MONGO_PASSWORD'] %>

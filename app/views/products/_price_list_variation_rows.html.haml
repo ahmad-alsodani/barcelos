@@ -1,0 +1,28 @@
+- unless product.variations.empty?
+  %div.variations
+  
+    %div.container_12.headings
+      %div.grid_2.alpha &nbsp;
+      %div.grid_1 sku
+      %div.grid_1 units
+      %div.grid_6 description
+      %div.grid_2.omega unit price
+
+    - product.variations.each do |variation|
+
+      %div.container_12.variation
+
+        %div.grid_1.alpha.thumbnail
+          = image_tag variation.photo.url(:thumb)
+
+        %div.grid_2
+          = variation.sku
+        
+        %div.grid_1
+          = variation.units
+        
+        %div.grid_6.description
+          = variation.description.html_safe
+        
+        %div.grid_2.omega.price
+          = variation.unit_price

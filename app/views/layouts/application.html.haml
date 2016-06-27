@@ -1,0 +1,30 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+
+    %title= t('site_name')
+
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+
+    = stylesheet_link_tag "application", :media => "all"
+    = yield :styles
+    
+  /[if IE]
+    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    
+  /[if lt IE 9]
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+  = csrf_meta_tags
+
+  %body
+
+    %div#container
+      = render 'layouts/masthead'
+      = render 'layouts/content_container'
+      = render 'layouts/footer'
+      
+  = javascript_include_tag "application"  
+  = yield :scripts

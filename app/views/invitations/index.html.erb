@@ -1,0 +1,28 @@
+<div class="invites">
+  
+  <div class="actions">
+    <%= link_to t("invitation.new"), new_retailer_invitation_url %>
+  </div>
+  
+  <div class="headers">
+    <div class="email">Email</div>
+    <div class="date">Date</div>
+    <!-- <div class="actions">Actions</div> -->
+  </div>
+
+  
+  <% invitees.each do |invitee| %>
+    <div class="invite">
+
+      <div class="email">
+        <%= invitee.email %>
+      </div>
+      
+      <div class="date">
+        <%= invitee.invitation_sent_at.to_s(:short) %>
+      </div>
+
+    </div>
+  <% end %>
+  
+</div>

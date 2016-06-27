@@ -1,0 +1,11 @@
+%nav
+  %li.first= link_to t('navigation.home'), home_page_url
+  %li= link_to t('navigation.products'), products_url
+  %li= link_to t('navigation.retailers'), retailers_url
+  %li= link_to t('navigation.contact'), contact_page_url
+
+  - if admin_signed_in?
+    %li= link_to(t('navigation.invitations'), invitations_url)
+    %li= link_to(t('navigation.logout'), destroy_admin_session_path, :method => :delete)
+  - elsif retailer_signed_in?
+    %li= link_to(t('navigation.logout'), destroy_retailer_session_path, :method => :delete)

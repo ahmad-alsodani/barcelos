@@ -1,0 +1,61 @@
+<div class="form">
+  
+  <%= form_for :contact_details, url: send_contact_form_url, method: :post do |form| %>
+
+    <div class="pair">
+      <div class="label">
+        <%= form.label :name, "Name:" %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :name %>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="label">
+        <%= form.label :store_name, "Company" %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :store_name %>
+      </div>
+    </div>
+  
+    <div class="pair">
+      <div class="label">
+        <%= form.label :email %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :email %>
+      </div>
+    </div>
+    
+    <div class="pair">
+      <div class="label">
+        <%= form.label :subject %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :subject %>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="label">
+        <%= form.label :message %>
+      </div>
+
+      <div class="field">
+        <%= form.text_area :message, rows: 6, cols: 30 %>
+      </div>
+    </div>
+
+    <div class="submit">
+      <%= submit_tag(" SEND ") %>
+    </div>    
+
+  <% end %>
+
+</div>

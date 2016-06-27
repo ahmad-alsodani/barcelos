@@ -1,0 +1,39 @@
+<section>
+
+  <header>
+    <h1><%= t('product.prices') %></h1>
+  </header>
+    
+  <% unless products.empty? %>
+  
+  <div class="products prices">
+    <% products.each do |product| %>
+
+    <div class="product">
+    
+      <div class="grid_4 alpha" style="overflow:hidden;">
+          <%= image_tag product.photo.url(:list) %>
+      </div>
+    
+      <div class="grid_12 omega">
+        <div class="name"><%= product.name %></div>
+        <div><%= product.description %></div>
+        <%= render 'price_list_variation_rows', product: product %>
+        
+      <!--
+      <% if admin_signed_in? %>
+        <div class="actions">
+          <%= link_to 'Edit', edit_product_path(product) %> | 
+          <%= link_to 'Remove', product, confirm: 'Are you sure?', method: :delete %>
+        </div>
+      <% end %>
+      -->
+      </div>    
+    </div>
+
+    <% end %>
+    </div>
+  
+  <% end %>
+
+</section>

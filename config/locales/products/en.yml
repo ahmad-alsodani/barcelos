@@ -1,0 +1,18 @@
+en:
+  product:
+    list: "Products"
+    prices: "Price List"
+    new: "New Product"
+    show: "%{name}"
+    edit: 'Edit %{name}'
+    
+    created:
+      successfully: "'%{name}' was successfully added."
+    updated:
+      successfully: "'%{name}' was successfully updated."
+      
+    attributes:
+      name_en: "English Name"
+      name_pt: "Potuguese Name"
+      description_en: "English Description"
+      description_pt: "Portuguese Description"

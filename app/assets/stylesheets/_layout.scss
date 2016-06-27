@@ -1,0 +1,35 @@
+@import 'compass/utilities/general/clearfix';
+
+/* 960 Grid System ~ Core CSS.
+ * Learn more ~ http://960.gs/
+ * *
+ * Licensed under GPL and MIT. */
+
+@import "960/grid";
+
+#masthead {
+  h1 {
+    margin-bottom: 20px; 
+  }  
+}
+
+section {
+  @include clearfix;
+}
+
+section header h1 {
+  margin-bottom: 20px;  
+}
+
+#container {
+  @include grid-system(16);
+  @include clearfix;
+}
+
+#sidebar {
+  height: 100%;
+}
+
+#main-column {
+  height: 100%;
+}

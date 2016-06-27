@@ -1,0 +1,8 @@
+en:
+  navigation:
+    home: 'Home'
+    products: 'Products'
+    retailers: 'Retailers'
+    invitations: 'Invitations'
+    contact: 'Contact'
+    logout: 'Logout'

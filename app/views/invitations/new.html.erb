@@ -1,0 +1,30 @@
+<section>
+  
+  <header>
+    <h1>Send invitation</h1>
+  </header>
+  
+  <div class="form">
+
+    <%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
+
+      <%= devise_error_messages! %>
+
+      <div class="pair">
+        <div class="label">
+          <%= f.label :email %>
+        </div>
+        <div class="field">
+          <%= f.text_field :email %>
+        </div>
+      </div>
+      
+      <div class="submit">
+        <%= f.submit "Send an invitation" %>
+      </div>
+    
+    <% end %>
+
+  </div>
+  
+</section>

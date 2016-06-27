@@ -1,0 +1,26 @@
+<section>
+  
+  <header>
+    <h1><%= t('product.show', :name => product.name) %></h1>
+  </header>
+
+<div class="products prices">
+
+  <div class="product">
+  
+    <div class="grid_4 alpha" style="overflow:hidden;">
+        <%= image_tag product.photo.url(:list) %>
+    </div>
+  
+    <div class="grid_12 omega">
+      
+      <div class="name"><%= product.name %></div>
+      <div><%= product.description %></div>
+      
+    </div>    
+
+  </div>
+
+</div>
+    
+</section>

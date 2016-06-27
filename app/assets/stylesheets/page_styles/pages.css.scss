@@ -1,0 +1,33 @@
+@import 'compass/utilities/general/clearfix';
+@import "960/grid";
+
+.home {
+  
+  div {
+    
+    @include clearfix;
+  
+    #hero {
+      @include grid(7, 16);
+      @include alpha;
+      height: 300px;
+
+      background: transparent url('/assets/barcelos_feature.jpg') top left no-repeat;
+    }
+  
+    #story {
+      @include grid(9, 16);
+      @include omega;
+
+      h2 {
+        color: #333333;
+      }
+      
+      p {
+        line-height: 130%;
+        color: #333333;      
+      }
+    }
+  
+  }
+}

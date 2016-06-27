@@ -1,0 +1,11 @@
+%section#masthead
+  %header
+    %h1= t('site_name')
+
+    - if retailer_signed_in?
+      %div
+        logged in as: 
+        = current_retailer.email
+        %br
+
+  = render 'layouts/navigation'

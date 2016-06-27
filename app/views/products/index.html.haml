@@ -1,0 +1,20 @@
+%section
+
+  %header
+    %h1= t('product.list')
+
+    - if admin_signed_in?
+      =# link_to t('product.new'), new_product_path
+
+  %div
+  
+    %div.products.list
+      - products.each do |product|
+        %div.product
+          
+          %a{:href => product_url(product) }
+            %div.thumbnail= image_tag product.photo.url(:list)
+          
+            %div.info
+              %div.name= product.name
+              %div.overlay &nbsp;

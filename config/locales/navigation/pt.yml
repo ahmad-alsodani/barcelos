@@ -1,0 +1,8 @@
+pt:
+  navigation:
+    home: 'Inicial'
+    products: 'Produtos'
+    retailers: 'Revendedores'
+    invitations: 'Convites'
+    contact: 'Fale Conosco'
+    logout: 'Sair'
